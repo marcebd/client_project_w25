@@ -3,29 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thriving</title>
     <link rel="icon" href="images/UMSI_signature_vertical_informal_solidblue.jpg" type="image/jpeg">
+    <link rel="stylesheet" href="css/html5reset.css">
+	<link rel="stylesheet" href="css/style.css">
+    <title>Thriving</title>
 </head>
 <body>
     <header>
-            <a href = "#main-content">Skip to Main Content</a>
+        <a class="skip-link" href="#main-content" tabindex="0">Skip to Main Content</a>
+        <img src="images/umsi-logo.png" alt="UMSI Logo" class="brand">
         <nav>
             <ul>
-                <li><a href = "index.html">Home</a></li>
-                <li><a href = "page_1.html">Living</a></li>
-                <li><a href = "page_2.html">Studying</a></li>
-                <li><a href = "page_3.html">Thriving</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="page_1.html">Living</a></li>
+                <li><a href="page_2.html">Studying</a></li>
+                <li><a href="page_3.html" aria-current="page">Thriving</a></li>
             </ul>
         </nav>
         <h1>Thriving at Umich</h1>
     </header>
     <main id="main-content">
-        <div>
+        <section class="welcome-section">
             <h2>Discover how to thrive at the University of Michigan with these resources and support services.</h2>
             <p>University Health & Counseling (UHC) supports the health and well-being of the campus community through a public health-informed approach that emphasizes prevention, education, and treatment. We are inspired to help students realize their potential, cope with the stresses of life, work productively, and connect meaningfully with others.</p>
             <h3>UHC is made up of University Health Service (UHS), which offers medical services, and Counseling and Psychological Services (CAPS), which offers counseling services.</h3>
-        </div>
-        <div>
+        </section>
+        <section class="health-services">
             <img src="images/uhs_front.jpg" alt="University Health Service building">
             <h3><a href="https://uhs.umich.edu/">University Health Service (UHS)</a></h3>
             <p>University Health Service (UHS) is your campus health and wellness resource, offering comprehensive clinical services plus support for your well-being. And most services are free for currently enrolled University of Michigan students (Ann Arbor campus).</p>
@@ -50,8 +53,8 @@
                 <h4>Health Promotion and Community Engagement</h4>
                 <p>UHS offers a range of health promotion programs and services to help you make healthy choices and build a supportive community. Whether you're looking to learn more about nutrition, fitness, or mental health, UHS has the resources you need to stay well and thrive.</p>
             </div>
-        </div>
-        <div>
+        </section>
+        <sectionq class="counseling-services">
             <img src="images/caps.png" alt="Counseling and Psychological Services office">
             <h3><a href="https://caps.umich.edu/">Counseling and Psychological Services (CAPS)</a></h3>
             <div>
@@ -77,7 +80,7 @@
                 <h4>Uwill Teletherapy Services</h4>
                 <p>Uwill Teletherapy Services offers online counseling services to help you access mental health support from the comfort of your own home. Whether you're unable to come to campus, prefer the convenience of online therapy, or need immediate support, Uwill Teletherapy Services provides confidential and secure counseling services to help you cope, heal, and thrive.</p>
             </div>
-        </div>
+        </section>
     </main>
     <footer>
         <p>MSI Academic Advising | <a href="https://sites.google.com/umich.edu/msiacademicadvising/student-support-resources">UMSI Academic Advising </a></p>

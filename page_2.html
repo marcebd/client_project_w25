@@ -3,28 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Studying</title>
     <link rel="icon" href="images/UMSI_signature_vertical_informal_solidblue.jpg" type="image/jpeg">
+    <link rel="stylesheet" href="css/html5reset.css">
+	<link rel="stylesheet" href="css/style.css">
+    <title>Studying</title>
 </head>
 <body>
     <header>
-            <a href = "#main-content">Skip to Main Content</a>
+        <a class="skip-link" href="#main-content" tabindex="0">Skip to Main Content</a>
+        <img src="images/umsi-logo.png" alt="UMSI Logo" class="brand">
         <nav>
             <ul>
-                <li><a href = "index.html">Home</a></li>
-                <li><a href = "page_1.html">Living</a></li>
-                <li><a href = "page_2.html">Studying</a></li>
-                <li><a href = "page_3.html">Thriving</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="page_1.html">Living</a></li>
+                <li><a href="page_2.html" aria-current="page">Studying</a></li>
+                <li><a href="page_3.html">Thriving</a></li>
             </ul>
         </nav>
         <h1>Studying at UofM</h1>
     </header>
     <main id="main-content">
-        <div>
+        <section class="welcome-section">
             <h2>Discover what makes studying at UofM a unique and rewarding experience.</h2>
             <p>At the University of Michigan, you'll find a wealth of resources to help you succeed academically, from state-of-the-art libraries and study spaces to expert tutoring and academic advising. Whether you're preparing for exams, working on group projects, or conducting research, UofM has everything you need to excel in your studies.</p>
-        </div>
-        <div>
+        </section>
+        <section class="general-support">
             <img src="images/academic_support.jpg" alt="Student smilling in lecture hall">
             <h3>General Academic Support</h3>
             <p>UofM offers a wide range of academic support services to help you achieve your goals, including tutoring, writing assistance, and study groups. Whether you're struggling with a particular subject or looking to improve your study skills, UofM has the resources you need to succeed.</p>
@@ -42,8 +45,8 @@
                 <p>The Math Lab provides free tutoring for mathematics courses numbered through 217. Though help is not regularly available for other courses, we will attempt to answer the questions of any U-M student who comes to us for mathematics help. 
                 </p>
             </div>
-        </div>
-        <div>
+        </section>
+        <section class="programming-tutoring">
             <img src="images/tutoring_class.jpg" alt="Group of students paying attention to a tutor">
             <h3>UMSI Programming Peer tutoring</h3>
             <h4>UMSI Programming Peer Tutoring Information Available for the below courses:</h4>
@@ -56,29 +59,29 @@
             </ul>
             <p><a href="https://sites.google.com/umich.edu/umsitutoring/umsi-programming-tutoring?authuser=0">To Book Appointments with our Programming Peer Tutors</a></p>
             <p>If you have questions regarding the Programming Peer Tutoring, you can email Professor Anthony Whyte at arwhyte@umich.edu  and/or the UMSI Academic Success Team at umsi.academicsuccess@umich.edu for support. </p>
-        </div>
-        <div>
+        </section>
+        <section class="study-spaces">
             <h3>Study Spaces</h3>
             <p>UofM offers a variety of study spaces to suit your needs, from quiet libraries and computer labs to collaborative workspaces and outdoor study areas. Whether you prefer to study alone or with a group, you'll find the perfect spot to focus and get your work done.</p>
-            <div>
+            <div class="portal-item card">
                 <img src="images/law-quad-02.jpg" alt="Law Library entrance">
                 <h4>Central Campus</h4>
                 <p>Central Campus is home to many of U-M's academic buildings, including the Ross School of Business and the College of Literature, Science, and the Arts. It's also home to the iconic Michigan Union and the University of Michigan Museum of Art.</p>
                 <p><a href="https://umich-cc.libcal.com/">To Explore More.</a></p>
             </div>
-            <div>
+            <div class="portal-item card">
                 <img src="images/north_campus.jpg" alt="Panoramic view of north campus">
                 <h4>North Campus</h4>
                 <p>North Campus is one of the most underappreciated places on campus. It is home to the College of Engineering, Stamps School of Art and Design, Taubman College of Architecture and Urban Planning, and the School of Music, Theatre & Dance (SMTD).</p>
                 <p><a href="https://umich-nc.libcal.com/">To Explore More.</a></p>
             </div>
-            <div>
+            <div class="portal-item card">
                 <img src="images/library.jpg" alt="Duderstat Libary inside view">
                 <h4>U-M Library</h4>
                 <p>The University of Michigan Library is one of the largest university library systems in the United States. The library is home to more than 10 million print volumes, 3.5 million digitized materials, and 139,000 e-journals. There are several libraries to study at during you time here. From private rooms, to work stations and comfortable sitting areas.</p>
                 <p><a href="https://umich.libcal.com/">To Explore More.</a></p>
             </div>
-        </div>
+        </section>
     </main>
     <footer>
         <p>MSI Academic Advising | <a href="https://sites.google.com/umich.edu/msiacademicadvising/student-support-resources">UMSI Academic Advising </a></p>
