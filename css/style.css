@@ -305,8 +305,7 @@ p {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    color: white; 
+    align-items: center; 
     opacity: 0; 
     transition: opacity 0.3s ease; 
     text-align: center;
@@ -314,6 +313,7 @@ p {
     margin: 0.5rem;
     overflow: auto;
 }
+
 
 .card:hover .card-content,
 .card:focus .card-content {
@@ -329,27 +329,17 @@ p {
     opacity: 0; 
 }
 
-.card:nth-child(odd):hover,
-.card:nth-child(odd):focus {
-    background-color: #00274C; 
-}
-
-.card:nth-child(even):hover,
-.card:nth-child(even):focus {
+.card:nth-child(n):hover,
+.card:nth-child(n):focus {
     background-color: #FFCB05; 
 }
-.card:nth-child(even) p {
-    color: #00274C; 
-}
+
 .card:hover,
 .card:focus {
     transform: scale(1.05); 
 }
-.card:nth-child(odd) .card-content a {
-    color: white;
-    text-decoration: underline;
-}
-.card:nth-child(even) .card-content a {
+
+.card:nth-child(n) .card-content a {
     color: #00274C;
     text-decoration: underline;
 }
