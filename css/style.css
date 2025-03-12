@@ -1,12 +1,18 @@
-/* Import both Roboto and Roboto Condensed fonts */
+/* Import both Roboto and Roboto Condensed fonts taken from UMSI website */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Roboto+Condensed:wght@400;700&display=swap');
 
-/* Body text styles */
 body {
     color: #222;
     font-size: 100%;
     line-height: 1.5em;
     font-family: Roboto, Helvetica, Arial, 'Nimbus Sans L', sans-serif;
+    margin: 0.5rem 0 0.5rem 0;
+}
+
+*:focus-visible {
+    outline: 3px solid #ff0000;
+    outline-offset: 2px;
+    border-radius: 2px;
 }
 
 .skip-link {
@@ -31,7 +37,8 @@ body {
     padding: 1rem;
     background: #f2f2f2;
     border-bottom: 1% solid #ccc;
-    outline: 2% solid #000;
+    outline: 3px solid #ff0000;
+    outline-offset: 2px;
     display: block;
     grid-row: 1;
 }
@@ -40,22 +47,10 @@ body {
     background-color: #e0e0e0;
 }
 
-all:focus {
-    border: 0.125rem solid black;
-}
-
-header {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto auto;
-    justify-items: center;
-    gap: 1rem;
-    padding: 1rem 0;
-}
 
 .brand {
     width: 90%;
-    max-width: 18.75rem;
+    max-width: 20rem;
     margin: 0;
     grid-row: 2;
 }
@@ -67,17 +62,26 @@ nav {
     grid-row: 3;
 }
 
+header {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+    justify-items: center;
+    gap: 1rem;
+    padding: 1rem 0;
+}
+
 header h1 {
     grid-row: 4;
     text-align: left;
-    margin: 0 0 0 0.5rem;
+    margin: 0 0 0 1rem;
     font-size: clamp(1.5rem, 5vw, 2.5rem);
     font-weight: 700;
     color: #00274C;
     padding: 0 1rem;
     width: calc(100% - 2rem);
-    line-height: 1.2;
-    border-left: 0.313rem solid #FFCB05;
+    line-height: 1.5;
+    border-left: 0.500rem solid #FFCB05;
 }
 
 nav ul {
@@ -113,6 +117,11 @@ nav a:focus {
     outline: none;
 }
 
+nav a:focus-visible {
+    outline: 3px solid #ff0000;
+    outline-offset: 2px;
+}
+
 nav a[aria-current="page"] {
     background-color: #FFCB05;
     color: #00274C;
@@ -122,25 +131,29 @@ h1, h2, h3, h4 {
     font-family: 'Roboto Condensed', sans-serif;
 }
 
-h2 {
-    font-size: 1.5rem;
-    font-weight: 500;
+a {
     color: #00274C;
-    margin-bottom: 1rem;
 }
 
+h2 {
+    font-size: 2rem; 
+    font-weight: 600; 
+    color: #00274C; 
+    margin-bottom: 0.5rem; 
+    line-height: 2rem;
+}
 h3 {
     font-size: 1.5rem;
     font-weight: 400;
     color: #00274C;
     margin-bottom: 0.75rem;
+    margin-top: 0.75rem;
 }
 
 footer {
-    background-color: #00274C;  /* UMich blue */
+    background-color: #00274C;
     color: white;
     padding: 2rem 1rem;
-    margin-top: 3rem;
     text-align: center;
 }
 
@@ -150,7 +163,7 @@ footer p {
 }
 
 footer a {
-    color: #FFCB05;  /* UMich yellow */
+    color: #FFCB05;
     text-decoration: underline;
     transition: color 0.3s ease;
 }
@@ -160,6 +173,11 @@ footer a:focus {
     color: white;
     text-decoration: underline;
     outline: none;
+}
+
+footer a:focus-visible {
+    outline: 3px solid #ff0000;
+    outline-offset: 2px;
 }
 
 footer::before {
@@ -173,33 +191,323 @@ footer::before {
 }
 
 section {
-    border-bottom: 0.25rem solid #FFCB05; /* UMich yellow */
-    padding-bottom: 2rem; /* Add some space below each section */
-    margin-bottom: 2rem; /* Add space between sections */
+    border-bottom: 0.25rem solid #FFCB05; 
+    padding: 0.5rem 0.5rem 1.5rem 0.5rem; 
+    margin-bottom: 0.5rem; 
 }
 
 section:last-of-type {
-    border-bottom: none; /* Remove the border from the last section */
+    border-bottom: none; 
 }
 
 .welcome-section {
-    padding: 0.5rem; /* Add padding for spacing */
-    margin-bottom: 2rem; /* Space below the section */
+    padding: 0.5rem; 
+    margin-bottom: 0.5rem; 
 }
 
-.welcome-section h2 {
-    font-size: 2rem; /* Larger font size for the heading */
-    font-weight: 600; /* Slightly bolder font weight */
-    color: #00274C; /* UMich blue for consistency */
-    margin-bottom: 0.5rem; /* Space below the heading */
-    line-height: 2rem;
+p {
+    font-size: 1.1rem;
+    line-height: 1.6; 
 }
 
-.welcome-section p {
-    font-size: 1.1rem; /* Slightly larger font size for readability */
-    line-height: 1.6; /* Increased line height for better readability */
-    color: #333; /* Darker text color for contrast */
+.home-portal {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    padding: 0.5rem;
 }
+
+.home-portal h2 {
+    grid-column: 1 / -1; 
+}
+
+.portal-item {
+    position: relative;
+    height: 8rem;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.portal-item img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(2px) brightness(0.7);
+    transition: filter 0.3s ease;
+}
+
+.portal-item h3 {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    color: white;
+    background-color: #00274C;
+    padding: 1rem;
+    margin: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    max-width: calc(100% - 2rem);
+}
+
+.portal-item:hover img,
+.portal-item:focus img {
+    filter: blur(0) brightness(0.9);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    gap: 0.5rem;
+    justify-items: center;
+    margin-top: 0.5rem;
+}
+
+.card {
+    position: relative;
+    overflow: hidden; 
+    height: 12rem; 
+    border-radius: 0.5rem; 
+    transition: transform 0.6s; 
+    width: 90%;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    transition: opacity 0.3s ease; 
+}
+
+.card h3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    color: #FFCB05; 
+    z-index: 1; 
+    margin: 0; 
+    transition: opacity 0.3s ease; 
+    background-color: #00274C;
+    width: 100%;
+    text-align: center;
+}
+
+.card-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white; 
+    opacity: 0; 
+    transition: opacity 0.3s ease; 
+    text-align: center;
+    z-index: 2;
+    margin: 0.5rem;
+    overflow: auto;
+}
+
+.card:hover .card-content,
+.card:focus .card-content {
+    opacity: 1; 
+}
+
+.card:hover img,
+.card:hover h3,
+.card:hover h4,
+.card:focus img,
+.card:focus h3,
+.card:focus h4 {
+    opacity: 0; 
+}
+
+.card:nth-child(odd):hover,
+.card:nth-child(odd):focus {
+    background-color: #00274C; 
+}
+
+.card:nth-child(even):hover,
+.card:nth-child(even):focus {
+    background-color: #FFCB05; 
+}
+.card:nth-child(even) p {
+    color: #00274C; 
+}
+.card:hover,
+.card:focus {
+    transform: scale(1.05); 
+}
+.card:nth-child(odd) .card-content a {
+    color: white;
+    text-decoration: underline;
+}
+.card:nth-child(even) .card-content a {
+    color: #00274C;
+    text-decoration: underline;
+}
+
+.featured-guides ul,
+.events-section ul,
+.social-links ul,
+.programming-tutoring ul,
+.health-services ul,
+.counseling-services ul {
+    list-style: none;
+}
+
+.featured-guides li,
+.events-section li,
+.programming-tutoring li,
+.health-services li,
+.counseling-services li {
+    background-color: #f9f9f9;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin: 1rem 0;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+}
+
+.featured-guides li:nth-child(odd),
+.events-section li:nth-child(even),
+.programming-tutoring li:nth-child(odd),
+.health-services li:nth-child(even),
+.counseling-services li:nth-child(odd) {
+    border-left: 5px solid #00274C;
+}
+
+.featured-guides li:nth-child(even),
+.events-section li:nth-child(odd),
+.programming-tutoring li:nth-child(even),
+.health-services li:nth-child(odd),
+.counseling-services li:nth-child(even) {
+    border-left: 5px solid #FFCB05;
+}
+
+.featured-guides li:hover,
+.events-section li:hover,
+.programming-tutoring li:hover,
+.health-services li:hover,
+.counseling-services li:hover,
+.featured-guides li:focus,
+.events-section li:focus,
+.programming-tutoring li:focus,
+.health-services li:focus,
+.counseling-services li:focus {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.events-section strong {
+    color: #00274C;
+}
+.events-section a {
+    color: #00274C;
+    text-decoration: underline;
+    transition: color 0.3s;
+}
+
+.events-section a:hover,
+.featured-guides a:hover,
+.programming-tutoring a:hover,
+.events-section a:focus,
+.featured-guides a:focus,
+.programming-tutoring a:focus {
+    color: #FFCB05;
+}
+
+.success-stories blockquote {
+    background-color: #f0f4ff;
+    border-left: 5px solid #00274C;
+    padding: 1rem; 
+    margin: 1rem 0;
+    border-radius: 0.5rem;
+    font-style: italic;
+    color: #333;
+    position: relative;
+}
+
+.social-links a {
+    color: #00274C;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #FFCB05;
+}
+
+.general-support {
+    position: relative;
+}
+
+.image-container {
+    position: relative;
+}
+
+.image-container img {
+    width: 100%;
+}
+
+.general-support h2,
+.programming-tutoring h2,
+.counseling-services h2,
+.health-services h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #FFCB05;
+    color: #00274C;
+    padding: 0.5rem;
+    text-align: center;
+    font-size: 1.5rem;
+    width: 100%;
+}
+
+.general-support > div,
+.counseling-services > div,
+.health-services > div {
+    border-top: 0.2rem solid #00274C;
+}
+
+.general-support > div:first-of-type,
+.counseling-services > div:first-of-type,
+.health-services > div:first-of-type {
+    border-top: none; 
+}
+
+.card:focus-within {
+    transform: scale(1.05);
+}
+
+.card:focus-within img,
+.card:focus-within h4 {
+    opacity: 0;
+}
+
+.card:focus-within .card-content {
+    opacity: 1;
+}
+
+.card:nth-child(odd):focus-within {
+    background-color: #00274C;
+}
+
+.card:nth-child(even):focus-within {
+    background-color: #FFCB05;
+}
+
+
+
+
 
 
 
