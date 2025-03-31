@@ -49,6 +49,7 @@ body {
 }
 
 nav {
+    position: relative;
     background-color: #00274C;
     padding: 0.5rem;
     width: 100%;
@@ -74,14 +75,25 @@ header h1 {
     border-left: 0.500rem solid #FFCB05;
 }
 
+.hamburger {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+
 nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
+    display: none;
+    position: absolute; 
+    background-color: #00274C; 
+    width: 30%; 
+    z-index: 1000; 
+}
+
+nav.active ul {
+    display: block; 
 }
 
 nav li {
@@ -424,7 +436,10 @@ blockquote {
     }
     /*Makes navigation lay across the screen instead of vertical*/
     nav ul {
-        flex-direction: row;
+        display: flex; 
+        flex-direction: row; 
+        width: 100%;
+        position: static;
     }
     /* Makes home portal responsive and wrap around so images don't become too big*/
     .home-portal > h2,
@@ -544,6 +559,10 @@ blockquote {
         cursor: pointer;
         width: 100%;
         font-weight: bold;
+    }
+
+    .hamburger {
+        display: none;
     }
 }
 
