@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/UMSI_signature_vertical_informal_solidblue.jpg" type="image/jpeg">
+    <link rel="stylesheet" href="css/html5reset.css">
+	<link rel="stylesheet" href="css/style.css">
+    <title>404 Page - Lost at Umich?</title>
+</head>
+<body>
+    <header>
+        <a class="skip-link" href="#main-content" tabindex="0">Skip to Main Content</a>
+        <img src="images/umsi-logo.png" alt="UMSI Logo" class="brand">
+        <nav>
+            <button class="hamburger" aria-label="Toggle navigation">
+                &#9776; <!-- hamburger icon -->
+            </button>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="living.html">Living</a></li>
+                <li><a href="studying.html">Studying</a></li>
+                <li><a href="thriving.html">Thriving</a></li>
+            </ul>
+        </nav>
+        <h1>Oop! Page not Found!</h1>
+    </header>
+    <main id="main-content" class="error-page">
+        <img src="images/404Page.webp" alt="404 Error - Page Not Found">
+        <p class="error-message">Looks like you've wandered off the beaten path. But don't worry, even the best Wolverines get lost sometimes!</p>
+        <p>Click <a href="index.html">Back to Home Page</a> to return home and continue your journey!</p>
+    </main>
+    <footer>
+        <p>MSI Academic Advising | <a href="https://sites.google.com/umich.edu/msiacademicadvising/student-support-resources">UMSI Academic Advising</a> | © Copyrights <span id="year"></span> by Marcela Billingslea. All rights reserved.</p>
+    </footer>
+    <script>
+        document.getElementById("year").innerHTML = new Date().getFullYear();
+        document.querySelector('.hamburger').addEventListener('click', function() {
+            const nav = document.querySelector('nav');
+            nav.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

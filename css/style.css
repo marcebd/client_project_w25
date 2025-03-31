@@ -487,6 +487,31 @@ font-size: 14px;
     font-weight: bold;
 }
 
+.error-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+    background-color: #ffffff;
+}
+
+.error-page img {
+    width: 60%;
+    
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+}
+
+.error-message {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #00274C;
+    margin-bottom: 1rem;
+}
+
 @media screen and (min-width: 800px) {
     .brand {
         width: 50%;
@@ -496,17 +521,15 @@ font-size: 14px;
     p {
         padding: 1rem;
     }
-    /*Makes navigation lay across the screen instead of vertical*/
     nav ul {
         display: flex; 
         flex-direction: row; 
         width: 100%;
         position: static;
     }
-    /* Makes home portal responsive and wrap around so images don't become too big*/
     .home-portal > h2,
     .success-stories > h2,
-    .success-stories > p { /* Makes the h2 and p span the entire width of the portal */
+    .success-stories > p {
         display: block;
         width: 100%;
     }
@@ -518,7 +541,7 @@ font-size: 14px;
     .programming-tutoring ul,
     .health-services ul,
     .counseling-services ul,
-    .box { /*Removes grid layout to make home-portal, all grids, and quotes responsive to screen size */
+    .box {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
@@ -529,24 +552,22 @@ font-size: 14px;
     .portal-item,
     .card,
     .featured-guides li{
-        width: 300px; /* Sets a fixed width for the portal items */
+        width: 300px;
     }
 
     .events-section li,
     .object{
-        width: 400px; /* Sets a fixed width for the portal items */
+        width: 400px;
     }
     .card {
         margin-left: 1%;
         align-items: center;
     }
 
-    /*Makes images smaller but without weird shrinking*/
     .image-container img {
         height: 20rem;
         object-fit: cover;
     }
-    /*Removes border from mobile view for cleaner look in desktop view*/
     .general-support > div,
     .counseling-services > div,
     .health-services > div {
