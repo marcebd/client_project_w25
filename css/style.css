@@ -413,7 +413,139 @@ blockquote {
     color: #333;
 }
 
+@media screen and (min-width: 800px) {
+    .brand {
+        width: 50%;
+        align-self: baseline;
+    }
 
+    p {
+        padding: 1rem;
+    }
+    /*Makes navigation lay across the screen instead of vertical*/
+    nav ul {
+        flex-direction: row;
+    }
+    /* Makes home portal responsive and wrap around so images don't become too big*/
+    .home-portal > h2,
+    .success-stories > h2,
+    .success-stories > p { /* Makes the h2 and p span the entire width of the portal */
+        display: block;
+        width: 100%;
+    }
+    .home-portal,
+    .success-stories,
+    .grid,
+    .featured-guides ul,
+    .events-section ul,
+    .programming-tutoring ul,
+    .health-services ul,
+    .counseling-services ul,
+    .box { /*Removes grid layout to make home-portal, all grids, and quotes responsive to screen size */
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .home-portal{
+        justify-content: center;
+    }
+    .portal-item,
+    .card,
+    .featured-guides li{
+        width: 300px; /* Sets a fixed width for the portal items */
+    }
+
+    .events-section li,
+    .object{
+        width: 400px; /* Sets a fixed width for the portal items */
+    }
+    .card {
+        margin-left: 1%;
+        align-items: center;
+    }
+
+    /*Makes images smaller but without weird shrinking*/
+    .image-container img {
+        height: 20rem;
+        object-fit: cover;
+    }
+    /*Removes border from mobile view for cleaner look in desktop view*/
+    .general-support > div,
+    .counseling-services > div,
+    .health-services > div {
+        border-top: none;
+    }
+
+    .object {
+        background-color: #f9f9f9;
+        border-radius: 0.5rem;
+        padding: 1rem;
+        transition: transform 0.3s ease;
+        margin: 1rem 0 1rem 0;
+    }
+
+    .form-toggle-btn {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: #00274C;
+        color: white;
+        padding: 14px 20px;
+        font-size: 16px;
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+        z-index: 9999;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        border: 2px solid #FFCB05;
+    }      
+    .umsi-feedback-form {
+        position: fixed;
+        bottom: 80px;
+        right: 20px;
+        background: #ffffff;
+        border: 1px solid #ccc;
+        padding: 16px;
+        border-radius: 8px;
+        width: 280px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        font-family: sans-serif;
+        z-index: 9998;
+        display: none;
+    }      
+    
+    .umsi-feedback-form.visible {
+        display: block;
+    }
+    
+    .umsi-feedback-form input,
+    .umsi-feedback-form select,
+    .umsi-feedback-form textarea {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 6px;
+    box-sizing: border-box;
+    font-size: 14px;
+    }
+
+    .form-title {
+        margin-top: 0;
+        font-size: 16px;
+        font-weight: bold;
+        color: #00274C;
+    }
+    
+    .form-submit-btn {
+        background: #00274C;
+        color: white;
+        border: none;
+        padding: 8px;
+        border-radius: 4px;
+        cursor: pointer;
+        width: 100%;
+        font-weight: bold;
+    }
+}
 
 
 
