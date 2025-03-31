@@ -425,6 +425,68 @@ blockquote {
     color: #333;
 }
 
+.form-toggle-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #00274C;
+    color: white;
+    padding: 14px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    z-index: 9999;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border: 2px solid #FFCB05;
+}      
+.umsi-feedback-form {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    background: #ffffff;
+    border: 1px solid #ccc;
+    padding: 16px;
+    border-radius: 8px;
+    width: 280px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    font-family: sans-serif;
+    z-index: 9998;
+    display: none;
+}      
+
+.umsi-feedback-form.visible {
+    display: block;
+}
+
+.umsi-feedback-form input,
+.umsi-feedback-form select,
+.umsi-feedback-form textarea {
+width: 100%;
+margin-bottom: 10px;
+padding: 6px;
+box-sizing: border-box;
+font-size: 14px;
+}
+
+.form-title {
+    margin-top: 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: #00274C;
+}
+
+.form-submit-btn {
+    background: #00274C;
+    color: white;
+    border: none;
+    padding: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-weight: bold;
+}
+
 @media screen and (min-width: 800px) {
     .brand {
         width: 50%;
@@ -497,68 +559,6 @@ blockquote {
         padding: 1rem;
         transition: transform 0.3s ease;
         margin: 1rem 0 1rem 0;
-    }
-
-    .form-toggle-btn {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        background: #00274C;
-        color: white;
-        padding: 14px 20px;
-        font-size: 16px;
-        border: none;
-        border-radius: 30px;
-        cursor: pointer;
-        z-index: 9999;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        border: 2px solid #FFCB05;
-    }      
-    .umsi-feedback-form {
-        position: fixed;
-        bottom: 80px;
-        right: 20px;
-        background: #ffffff;
-        border: 1px solid #ccc;
-        padding: 16px;
-        border-radius: 8px;
-        width: 280px;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        font-family: sans-serif;
-        z-index: 9998;
-        display: none;
-    }      
-    
-    .umsi-feedback-form.visible {
-        display: block;
-    }
-    
-    .umsi-feedback-form input,
-    .umsi-feedback-form select,
-    .umsi-feedback-form textarea {
-    width: 100%;
-    margin-bottom: 10px;
-    padding: 6px;
-    box-sizing: border-box;
-    font-size: 14px;
-    }
-
-    .form-title {
-        margin-top: 0;
-        font-size: 16px;
-        font-weight: bold;
-        color: #00274C;
-    }
-    
-    .form-submit-btn {
-        background: #00274C;
-        color: white;
-        border: none;
-        padding: 8px;
-        border-radius: 4px;
-        cursor: pointer;
-        width: 100%;
-        font-weight: bold;
     }
 
     .hamburger {
