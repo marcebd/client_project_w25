@@ -136,7 +136,7 @@
 
         </main>
     <footer>
-        <p>MSI Academic Advising | <a href="https://sites.google.com/umich.edu/msiacademicadvising/student-support-resources">UMSI Academic Advising </a></p>
+        <p>MSI Academic Advising | <a href="https://sites.google.com/umich.edu/msiacademicadvising/student-support-resources">UMSI Academic Advising </a> | © Copyrights <span id="year"></span> by Marcela Billingslea. All rights reserved.</p>
     </footer>
     <script>
         fetch('form.html')
@@ -151,6 +151,7 @@
                     formBox.classList.toggle('visible');
                 });
             });
+        document.getElementById("year").innerHTML = new Date().getFullYear();
     </script>
         
 </body>

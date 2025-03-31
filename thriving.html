@@ -85,9 +85,23 @@
         </section>
     </main>
     <footer>
-        <p>MSI Academic Advising | <a href="https://sites.google.com/umich.edu/msiacademicadvising/student-support-resources">UMSI Academic Advising </a></p>
+        <p>MSI Academic Advising | <a href="https://sites.google.com/umich.edu/msiacademicadvising/student-support-resources">UMSI Academic Advising</a> | © Copyrights <span id="year"></span> by Marcela Billingslea. All rights reserved.</p>
     </footer>
-    
+    <script>
+        fetch('form.html')
+            .then(res => res.text())
+            .then(html => {
+                const wrapper = document.createElement('div');
+                wrapper.innerHTML = html;
+                document.body.appendChild(wrapper);
+                const toggleBtn = wrapper.querySelector('.form-toggle-btn');
+                const formBox = wrapper.querySelector('.umsi-feedback-form');
+                toggleBtn.addEventListener('click', () => {
+                    formBox.classList.toggle('visible');
+                });
+            });
+            document.getElementById("year").innerHTML = new Date().getFullYear();
+    </script>
 </body>
 
 </html>

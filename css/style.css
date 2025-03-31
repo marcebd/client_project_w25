@@ -418,6 +418,10 @@ blockquote {
         width: 50%;
         align-self: baseline;
     }
+
+    p {
+        padding: 1rem;
+    }
     /*Makes navigation lay across the screen instead of vertical*/
     nav ul {
         flex-direction: row;
@@ -470,6 +474,14 @@ blockquote {
     .counseling-services > div,
     .health-services > div {
         border-top: none;
+    }
+
+    .object {
+        background-color: #f9f9f9;
+        border-radius: 0.5rem;
+        padding: 1rem;
+        transition: transform 0.3s ease;
+        margin: 1rem 0 1rem 0;
     }
 
     .form-toggle-btn {
